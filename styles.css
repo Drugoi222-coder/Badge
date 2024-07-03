@@ -1,0 +1,104 @@
+@import "normalize.css";
+@import "fonts/fonts.css";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #3579f5;
+  --add-color: white;
+  --button-color: #f4f8ff;
+}
+
+.badge {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--main-color);
+  color: var(--add-color);
+  font-family: "Inter-Reg";
+  width: 743px;
+  border-radius: 10px;
+  height: 92px;
+  padding: 12px 18px 15px 22px;
+}
+
+.circle {
+  background: conic-gradient(var(--add-color) 0.03turn, rgba(255, 255, 255, 0.5) 0.03turn);
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle::after {
+  content: attr(data-count);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: 100%;
+  width: 58px;
+  height: 58px;
+  font-size: 20px;
+}
+
+.badge__circle {
+  margin-top: 4px;
+}
+
+.badge__content {
+  margin-left: 15px;
+}
+
+.badge__type {
+  background: #2364db;
+  border-radius: 40px;
+  width: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge__type-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 13px;
+}
+
+.badge__completed {
+  margin: 0;
+  margin-top: 5px;
+  margin-left: 1px;
+  font-size: 15px;
+  font-family: "Inter-Semi";
+}
+
+.badge__descr {
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 1px;
+  font-size: 12px;
+}
+
+.badge__button {
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-top: 14px;
+  margin-left: 68px;
+  background-color: var(--button-color);
+  cursor: pointer;
+  color: #4777ed;
+  font-size: 14px;
+}
