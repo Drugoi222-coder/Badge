@@ -9,6 +9,7 @@
   --main-color: #3579f5;
   --add-color: white;
   --button-color: #f4f8ff;
+  --progress-bar: 0.02turn;
 }
 
 .badge {
@@ -24,14 +25,13 @@
 }
 
 .circle {
-  background: conic-gradient(var(--add-color) 0.03turn, rgba(255, 255, 255, 0.5) 0.03turn);
+  background: conic-gradient(var(--add-color) var(--progress-bar), rgba(255, 255, 255, 0.5) var(--progress-bar));
   border-radius: 100%;
   width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .circle::after {
@@ -39,7 +39,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   background-color: var(--main-color);
   border-radius: 100%;
   width: 58px;
